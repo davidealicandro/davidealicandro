@@ -7,16 +7,30 @@
     body {
       margin: 0;
       padding: 0;
+      position: relative; /* necessario per posizionare i link */
     }
     img {
       display: block;
       width: 100%;
       height: auto;
     }
+    .link {
+      position: absolute;
+      display: block;
+      background: rgba(0,0,0,0); /* rettangolo invisibile */
+      cursor: pointer; /* cambia il cursore quando passi sopra */
+    }
   </style>
 </head>
 <body>
-  <!-- Mostra la scansione corretta -->
+  <!-- Mostra la scansione -->
   <img src="img001.jpg" alt="">
+
+  <!-- Link invisibili sopra le scritte -->
+  <!-- Modifica top, left, width e height per allineare perfettamente alle scritte -->
+  <a href="about.html" class="link" style="top:100px; left:50px; width:100px; height:20px;"></a>
+  <a href="projects.html" class="link" style="top:140px; left:50px; width:100px; height:20px;"></a>
+  <a href="contact.html" class="link" style="top:180px; left:50px; width:100px; height:20px;"></a>
+  <a href="shop.html" class="link" style="top:220px; left:50px; width:100px; height:20px;"></a>
 </body>
 </html>
