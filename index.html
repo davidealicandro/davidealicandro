@@ -7,36 +7,27 @@
     body {
       margin: 0;
       padding: 0;
-      background: #fff;
-      font-family: monospace;
-      text-align: center;
+      position: relative;
     }
     img {
-      max-width: 100%;
-      height: auto;
       display: block;
-      margin: 0 auto;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
     .link {
       position: absolute;
-      color: transparent; /* invisibile ma cliccabile */
+      display: block;
+      color: transparent; /* invisibile */
     }
   </style>
 </head>
 <body>
-  <img src="img025.jpeg" alt="Foglio">
-  
-  <!-- Esempio di link invisibili -->
-  <a href="about.html" class="link" style="top:50px; left:50px; width:100px; height:20px;"></a>
-  <a href="projects.html" class="link" style="top:80px; left:50px; width:100px; height:20px;"></a>
-  <a href="contact.html" class="link" style="top:110px; left:50px; width:100px; height:20px;"></a>
+  <img src="img025.jpg" alt="Foglio">
+
+  <!-- Link invisibili posizionati sopra le scritte -->
+  <a href="about.html" class="link" style="top:100px; left:50px; width:100px; height:20px;"></a>
+  <a href="projects.html" class="link" style="top:150px; left:50px; width:100px; height:20px;"></a>
+  <a href="contact.html" class="link" style="top:200px; left:50px; width:100px; height:20px;"></a>
 </body>
 </html>
 
