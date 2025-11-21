@@ -2,6 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+
+  <!-- ⭐ NECESSARIO PER FUNZIONARE SU MOBILE ⭐ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Home</title>
 
   <style>
@@ -10,7 +14,7 @@
       padding: 0;
     }
 
-    /* Contenitore che diventa responsivo su mobile */
+    /* Contenitore responsivo */
     .img-wrapper {
       position: relative;
       width: 90vw;          /* si adatta allo schermo */
@@ -20,7 +24,7 @@
 
     img {
       display: block;
-      width: 100%;          /* immagine sempre grande su mobile */
+      width: 100%;          /* ora funziona davvero su mobile */
       height: auto;
     }
 
@@ -30,7 +34,7 @@
       cursor: pointer;
     }
 
-    /* ⭐ Effetto "Luce rossa da camera oscura" ⭐ */
+    /* Luce rossa da camera oscura */
     .link:hover {
       background: rgba(255, 0, 0, 0.25);
       box-shadow:
@@ -46,7 +50,7 @@
   <div class="img-wrapper">
     <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
 
-    <!-- Pulsanti invisibili (coordinate fisse, semplici) -->
+    <!-- Pulsanti invisibili -->
     <a href="about.html"    class="link" style="top:175px; left:200px; width:90px; height:20px;"></a>
     <a href="projects.html" class="link" style="top:200px; left:200px; width:120px; height:20px;"></a>
     <a href="contact.html"  class="link" style="top:225px; left:200px; width:110px; height:20px;"></a>
