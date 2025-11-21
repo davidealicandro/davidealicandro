@@ -12,26 +12,31 @@
       position: relative; /* necessario per posizionare i link */
     }
 
-    img {
-      display: block;
-      width: 900px;   /* larghezza originale */
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
+    /* Contenitore immagine con larghezza fissa */
+    .img-wrapper {
+      position: relative;
+      width: 900px; /* larghezza originale */
+      margin: 0 auto;
     }
 
+    img {
+      display: block;
+      width: 100%; /* si adatta al contenitore */
+      height: auto;
+    }
+
+    /* Link invisibili bloccati */
     .link {
       position: absolute;
       display: block;
-      background: rgba(0,0,0,0); /* rettangolo invisibile */
-      cursor: pointer; /* cambia il cursore quando passi sopra */
+      background: rgba(0,0,0,0); /* invisibile */
+      cursor: pointer;            /* cambia cursore */
     }
 
     /* Effetto "Luce rossa da camera oscura" */
     .link:hover {
       background: rgba(255, 0, 0, 0.25);
-      box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.5);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
     }
 
   </style>
@@ -39,19 +44,15 @@
 
 <body>
 
-  <!-- Immagine della scansione -->
-  <img src="imghome3.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
+  <div class="img-wrapper">
+    <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
 
-  <!-- Link invisibili sopra le scritte -->
-  <a href="about.html" class="link" style="top:50px; left:40px; width:100px; height:30px;"></a>
-  <a href="projects.html" class="link" style="top:90px; left:40px; width:155px; height:30px;"></a>
-  <a href="contact.html" class="link" style="top:120px; left:40px; width:140px; height:30px;"></a>
-  <a href="shop.html" class="link" style="top:160px; left:40px; width:80px; height:30px;"></a>
+    <!-- Pulsanti invisibili con nuove posizioni e dimensioni -->
+    <a href="about.html" class="link" style="top:50px; left:40px; width:100px; height:30px;"></a>
+    <a href="projects.html" class="link" style="top:90px; left:40px; width:155px; height:30px;"></a>
+    <a href="contact.html" class="link" style="top:120px; left:40px; width:140px; height:30px;"></a>
+    <a href="shop.html" class="link" style="top:160px; left:40px; width:80px; height:30px;"></a>
+  </div>
 
 </body>
 </html>
-
-
-
-
-
