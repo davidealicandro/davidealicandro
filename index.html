@@ -2,7 +2,6 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
 
   <style>
@@ -11,10 +10,10 @@
       padding: 0;
     }
 
-    /* Contenitore responsivo */
+    /* Contenitore con larghezza bloccata */
     .img-wrapper {
       position: relative;
-      width: 1980px; /* 900px * 2.2 = 1980px */
+      width: 1980px; /* 900px * 2.2 */
       margin: 0 auto;
     }
 
@@ -26,7 +25,7 @@
 
     .link {
       position: absolute;
-      background: rgba(0,0,0,0); /* invisibile */
+      background: rgba(0,0,0,0);
       cursor: pointer;
     }
 
@@ -38,26 +37,23 @@
         inset 0 0 6px rgba(255, 0, 0, 0.3);
     }
 
-    /* Ingrandimento proporzionale dei link */
-    /* Tutti i valori dei link sono moltiplicati per 2.2 */
-    a.about    { top: 175px * 2.2; left: 200px * 2.2; width: 90px * 2.2; height: 20px * 2.2; }
-    a.projects { top: 200px * 2.2; left: 200px * 2.2; width: 120px * 2.2; height: 20px * 2.2; }
-    a.contact  { top: 225px * 2.2; left: 200px * 2.2; width: 110px * 2.2; height: 20px * 2.2; }
-    a.shop     { top: 250px * 2.2; left: 200px * 2.2; width: 80px * 2.2; height: 20px * 2.2; }
+    /* Link con posizioni ingrandite proporzionalmente */
+    .about    { top: 385px; left: 440px; width: 198px; height: 44px; }   /* 175*2.2, 200*2.2, 90*2.2, 20*2.2 */
+    .projects { top: 440px; left: 440px; width: 264px; height: 44px; }   /* 200*2.2, 200*2.2, 120*2.2, 20*2.2 */
+    .contact  { top: 495px; left: 440px; width: 242px; height: 44px; }   /* 225*2.2, 200*2.2, 110*2.2, 20*2.2 */
+    .shop     { top: 550px; left: 440px; width: 176px; height: 44px; }   /* 250*2.2, 200*2.2, 80*2.2, 20*2.2 */
 
   </style>
 </head>
-
 <body>
 
   <div class="img-wrapper">
     <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
 
-    <!-- Pulsanti invisibili -->
-    <a href="about.html"    class="link about"></a>
+    <a href="about.html" class="link about"></a>
     <a href="projects.html" class="link projects"></a>
-    <a href="contact.html"  class="link contact"></a>
-    <a href="shop.html"     class="link shop"></a>
+    <a href="contact.html" class="link contact"></a>
+    <a href="shop.html" class="link shop"></a>
   </div>
 
 </body>
