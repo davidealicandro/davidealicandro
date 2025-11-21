@@ -10,40 +10,46 @@
       padding: 0;
     }
 
-    /* CONTENITORE POSIZIONATO */
+    /* Contenitore che centra l'immagine e permette il posizionamento dei link */
     .img-wrapper {
       position: relative;
-      width: 900px;      /* LARGHEZZA BLOCCATA QUI */
-      margin: 0 auto;    /* centra il contenitore */
+      width: 900px;       /* larghezza fissa per posizionamento preciso */
+      margin: 0 auto;     /* centra il contenitore nella pagina */
     }
 
     img {
       display: block;
-      width: 100%;       /* l’immagine riempie il wrapper */
+      width: 100%;
       height: auto;
     }
 
     .link {
       position: absolute;
-      background: rgba(255,0,0,0); /* invisibile */
+      background: rgba(0,0,0,0); /* invisibile */
       cursor: pointer;
     }
+
+    /* ⭐ EFFETTO "LUCE ROSSA DA CAMERA OSCURA" ⭐ */
+    .link:hover {
+      background: rgba(255, 0, 0, 0.25);
+      box-shadow:
+        0 0 10px rgba(255, 60, 60, 0.4),
+        inset 0 0 6px rgba(255, 0, 0, 0.3);
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- CONTENITORE DELL’IMMAGINE -->
   <div class="img-wrapper">
-
     <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
 
-    <!-- LINK POSIZIONATI CORRETTAMENTE -->
-    <a href="about.html" class="link" style="top:175px; left:200px; width:90px; height:20px;"></a>
+    <!-- Pulsanti invisibili -->
+    <a href="about.html"    class="link" style="top:175px; left:200px; width:90px; height:20px;"></a>
     <a href="projects.html" class="link" style="top:200px; left:200px; width:120px; height:20px;"></a>
-    <a href="contact.html" class="link" style="top:225px; left:200px; width:110px; height:20px;"></a>
-    <a href="shop.html" class="link" style="top:250px; left:200px; width:80px; height:20px;"></a>
-
+    <a href="contact.html"  class="link" style="top:225px; left:200px; width:110px; height:20px;"></a>
+    <a href="shop.html"     class="link" style="top:250px; left:200px; width:80px; height:20px;"></a>
   </div>
 
 </body>
