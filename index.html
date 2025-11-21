@@ -3,42 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      position: relative; /* necessario per posizionare i link */
     }
+
+    /* CONTENITORE POSIZIONATO */
+    .img-wrapper {
+      position: relative;
+      width: 900px;      /* LARGHEZZA BLOCCATA QUI */
+      margin: 0 auto;    /* centra il contenitore */
+    }
+
     img {
-  display: block;
-  width: 900px;   /* larghezza fissa */
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
+      display: block;
+      width: 100%;       /* l’immagine riempie il wrapper */
+      height: auto;
+    }
+
     .link {
       position: absolute;
-      display: block;
-      background: rgba(0,0,0,0); /* rettangolo invisibile */
-      cursor: pointer; /* cambia il cursore quando passi sopra */
+      background: rgba(255,0,0,0); /* invisibile */
+      cursor: pointer;
     }
   </style>
 </head>
-<body>
-  <!-- Immagine della scansione -->
-  <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
 
-  <!-- Link invisibili sopra le scritte -->
-  <!-- I valori top, left, width, height possono essere regolati in base alla tua immagine -->
-  <a href="about.html" class="link" style="top:175px; left:200px; width:90px; height:20px;"></a>
-  <a href="projects.html" class="link" style="top:200px; left:200px; width:120px; height:20px;"></a>
-  <a href="contact.html" class="link" style="top:225px; left:200px; width:110px; height:20px;"></a>
-  <a href="shop.html" class="link" style="top:250px; left:200px; width:80px; height:20px;"></a>
+<body>
+
+  <!-- CONTENITORE DELL’IMMAGINE -->
+  <div class="img-wrapper">
+
+    <img src="img001.jpg" alt="Foglio scansionato con scritte About, Projects, Contact, Shop">
+
+    <!-- LINK POSIZIONATI CORRETTAMENTE -->
+    <a href="about.html" class="link" style="top:175px; left:200px; width:90px; height:20px;"></a>
+    <a href="projects.html" class="link" style="top:200px; left:200px; width:120px; height:20px;"></a>
+    <a href="contact.html" class="link" style="top:225px; left:200px; width:110px; height:20px;"></a>
+    <a href="shop.html" class="link" style="top:250px; left:200px; width:80px; height:20px;"></a>
+
+  </div>
+
 </body>
 </html>
-Bloccata larghezza immagine per posizionamento corretto link
-
-
-
-
-
