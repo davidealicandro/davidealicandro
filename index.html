@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ⭐ NECESSARIO PER FUNZIONARE SU MOBILE ⭐ -->
+  <!-- Viewport necessario per mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Home</title>
@@ -17,14 +17,14 @@
     /* Contenitore responsivo */
     .img-wrapper {
       position: relative;
-      width: 90vw;          /* si adatta allo schermo */
+      width: 90vw;          /* di default occupa quasi tutto lo schermo */
       max-width: 900px;     /* su desktop resta 900px */
       margin: 0 auto;
     }
 
     img {
       display: block;
-      width: 100%;          /* ora funziona davvero su mobile */
+      width: 100%;
       height: auto;
     }
 
@@ -42,6 +42,18 @@
         inset 0 0 6px rgba(255, 0, 0, 0.3);
     }
 
+    /* Media query per schermi piccoli (smartphone) */
+    @media (max-width: 600px) {
+      .img-wrapper {
+        width: 98vw;  /* quasi tutta la larghezza dello schermo */
+      }
+
+      /* ingrandiamo i link proporzionalmente */
+      .link {
+        transform: scale(1.5);  /* aumenta tutti i link del 50% */
+        transform-origin: top left; /* scala partendo dall’angolo in alto a sinistra */
+      }
+    }
   </style>
 </head>
 
