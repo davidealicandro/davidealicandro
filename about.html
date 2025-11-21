@@ -9,11 +9,11 @@
       padding: 0;
     }
 
-    /* Contenitore con larghezza fissa per bloccare layout */
+    /* Contenitore con larghezza fissa */
     .img-wrapper {
       position: relative;
       width: 900px; /* larghezza fissa */
-      margin: 0 auto; /* centra nella pagina */
+      margin: 0 auto;
     }
 
     img {
@@ -25,22 +25,22 @@
     /* Pulsante invisibile */
     .link-home {
       position: absolute;
-      top: 40;
-      left: 50;
-      width: 55;   /* puoi ridurre se vuoi coprire solo una parte */
-      height: 30;  /* puoi ridurre se vuoi coprire solo una parte */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(0,0,0,0); /* invisibile */
       cursor: pointer;
-      z-index: 2;
-      transition: all 0.3s ease;
+      z-index: 10; /* assicurati sia sopra l'immagine */
+      transition: box-shadow 0.3s ease, background 0.3s ease;
     }
 
-    /* Hover con luce gialla stile vintage */
+    /* Hover con luce gialla */
     .link-home:hover {
       background: rgba(255, 255, 0, 0.2);
       box-shadow:
-        0 0 15px rgba(255, 255, 100, 0.5),
-        inset 0 0 6px rgba(255, 255, 150, 0.3);
+        0 0 20px rgba(255, 255, 100, 0.7),
+        inset 0 0 10px rgba(255, 255, 150, 0.4);
     }
   </style>
 </head>
