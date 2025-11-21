@@ -21,25 +21,26 @@
       height: auto;
     }
 
-    /* Pulsante invisibile */
+    /* Pulsante invisibile piccolo in alto a sinistra */
     .link-home {
       position: absolute;
-      top: 40;
-      left: 45;
-      width: 70;
-      height: 25;
+      top: 20px;   /* distanza dal bordo superiore */
+      left: 20px;  /* distanza dal bordo sinistro */
+      width: 60px; /* larghezza pulsante */
+      height: 60px; /* altezza pulsante */
       background: rgba(0,0,0,0); /* invisibile */
       cursor: pointer;
       z-index: 10;
-      transition: all 0.3s ease;
+      transition: box-shadow 0.3s ease, background 0.3s ease;
+      border-radius: 50%; /* pulsante circolare, opzionale */
     }
 
-    /* ⭐ EFFETTO "LUCE GIALLA DA CAMERA OSCURA" ⭐ */
+    /* ⭐ Luce gialla vintage al passaggio del mouse ⭐ */
     .link-home:hover {
       background: rgba(255, 255, 0, 0.25);
       box-shadow:
-        0 0 10px rgba(255, 255, 60, 0.4),
-        inset 0 0 6px rgba(255, 255, 0, 0.3);
+        0 0 15px rgba(255, 255, 100, 0.7),
+        inset 0 0 8px rgba(255, 255, 150, 0.5);
     }
   </style>
 </head>
@@ -47,9 +48,8 @@
 
   <div class="img-wrapper">
     <img src="about1.jpg" alt="About">
-    <a href="index.html" class="link-home"></a>
+    <a href="index.html" class="link-home" title="Torna alla Home"></a>
   </div>
 
 </body>
 </html>
-
