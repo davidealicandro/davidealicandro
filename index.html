@@ -2,7 +2,6 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-
   <!-- Viewport necessario per mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,8 +16,8 @@
     /* Contenitore responsivo */
     .img-wrapper {
       position: relative;
-      width: 90vw;          /* di default occupa quasi tutto lo schermo */
-      max-width: 900px;     /* su desktop resta 900px */
+      width: 90vw;         /* default quasi tutta la larghezza dello schermo */
+      max-width: 900px;    /* su desktop resta 900px */
       margin: 0 auto;
     }
 
@@ -45,13 +44,18 @@
     /* Media query per schermi piccoli (smartphone) */
     @media (max-width: 600px) {
       .img-wrapper {
-        width: 98vw;  /* quasi tutta la larghezza dello schermo */
+        width: 100vw;   /* massima larghezza possibile */
+      }
+
+      img {
+        width: 100%;
+        height: auto;
       }
 
       /* ingrandiamo i link proporzionalmente */
       .link {
-        transform: scale(1.5);  /* aumenta tutti i link del 50% */
-        transform-origin: top left; /* scala partendo dall’angolo in alto a sinistra */
+        transform: scale(1.8);           /* scala al 180% */
+        transform-origin: top left;      /* scala a partire dall'angolo in alto a sinistra */
       }
     }
   </style>
