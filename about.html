@@ -4,13 +4,36 @@
   <meta charset="UTF-8">
   <title>About</title>
   <style>
-    body { margin: 0; padding: 0; }
-    img { width: 100%; height: auto; display: block; }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .img-wrapper {
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .link-home {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0); /* invisibile */
+      cursor: pointer;
+      z-index: 2;
+    }
   </style>
 </head>
 <body>
 
-  <img src="about1.jpg" alt="About">
+  <div class="img-wrapper">
+    <img src="about1.jpg" alt="About">
+    <a href="index.html" class="link-home"></a>
+  </div>
 
 </body>
 </html>
